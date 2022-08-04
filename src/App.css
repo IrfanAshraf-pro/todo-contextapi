@@ -1,0 +1,190 @@
+:root{
+  --primary:white;
+  --secondary:black;
+  --logo:#48435C;
+  --headings:#316B83;
+  --cardColor:#4A646C;
+  --lightColor:#93A29B;
+  --mainBg:#5A5766;
+  --completed:#36454F;
+}
+p{
+  font-family:'Poppins', sans-serif;
+}
+h1,h2{
+  font-family: 'Raleway', sans-serif;
+}
+.App{
+  background-color:var(--mainBg);
+  min-height:100vh;
+}
+/* NAVBAR */
+
+
+.logo{
+  font-family: 'Raleway', sans-serif;
+  font-size:2.5em;
+  font-weight:bold;
+  color:var(--primary);
+}
+
+.navbar-container{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  background-color:var(--logo);
+  padding:1em 5em;
+}
+
+.nav-items{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: 'Raleway', sans-serif;
+  color:var(--primary);
+}
+.nav-item{
+  padding:.3em .5em;
+  margin-left:.8em;
+  font-size:1.3em;
+  cursor:pointer;
+  border:none;
+}
+.nav-item:hover{
+  border-bottom:1px solid white;
+}
+
+/* Todos  */
+.todos-container{
+  max-width:80%;
+  margin:2rem auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.todos-empty{
+  width:60%;
+  padding:1em 1em;
+  margin:2em auto;
+  border-radius:.8em;
+  color:var(--primary);
+  text-align:center;
+  background-color:var(--cardColor);
+}
+
+/* TODO */
+.completed{
+  background-color:var(--completed);
+}
+.unComplete{
+  background-color:var(--cardColor);
+}
+.todo-container{
+  display:flex;
+  align-items:center;
+  padding:1em 2em;
+  margin:.8em auto;
+  width:80%;
+  border-radius:1.3em;
+  position:relative;
+  font-family: 'Raleway', sans-serif;
+}
+.todo-body{
+  margin-top:.6em;
+}
+.todo-name{
+  margin-left:1.6em;
+  font-size:1.5rem;
+  font-weight:500px;
+  color:var(--primary);
+}
+.completed.todo-name{
+  text-decoration-line: line-through;
+}
+.todo-status-container,
+.todo-body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.todo-icons{
+  position:absolute;
+  top:.5em;
+  right:1.2em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.delete-icon{
+  margin-left:.6em;
+}
+
+
+/* From  */
+
+.form-container{
+  width:70%;
+  margin:2em auto;
+  padding:1.8em .4em;
+  background-color:var(--lightColor);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:.6em;
+}
+.formContainer{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+}
+@media (max-width:500px){
+  .formContainer{
+    flex-direction:column;
+  }
+  .form-input{
+    margin-bottom:.8em;
+    width:auto;
+  }
+  .form-button{
+    width:90%;
+  }
+}
+
+.form-input{
+  padding:.7em 1.2em;
+  border-radius:.5em;
+  outline:none;
+  border:none;
+  width:60%;
+  font-size:1.2em;
+}
+.form-button{
+  padding:.7em 1.2em;
+  border-radius:.8em;
+  border:none;
+  font-size:1em;
+  font-weight:500;
+  color:var(--mainBg)
+}
+.form-button:hover{
+  background-color:var(--completed);
+  color:white;
+}
+/* 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
